@@ -9,6 +9,7 @@ CREATE TABLE alquiler.vivienda (
   idpro NUMBER(*,0) NOT NULL,
   idage NUMBER(*,0) NOT NULL,
   idinq NUMBER(*,0),
+  estviv CHAR,
   CONSTRAINT vivienda_pk PRIMARY KEY (idviv),
   CONSTRAINT vivienda_agencia FOREIGN KEY (idage) REFERENCES alquiler.agencia (idage),
   CONSTRAINT vivienda_inquilino FOREIGN KEY (idinq) REFERENCES alquiler.inquilino (idinq),
